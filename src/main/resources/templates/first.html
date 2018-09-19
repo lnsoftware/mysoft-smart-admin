@@ -11,11 +11,19 @@
 <body>
 
 <div sec:authorize="hasAuthority('DATACAPTURE_DETAIL_EDIT')">
-    DATACAPTURE DETAIL EDIT
+    数据补录编辑---有编辑权限的人看到
 </div>
 
-<div sec:authorize="hasAuthority('DATACAPTURE_DETAIL_SHOW')">
-    DATACAPTURE DETAIL SHOW
+<div sec:authorize="hasAuthority('DATACAPTURE_DETAIL_INPUT')">
+    数据补录录入---有录入的权限人可以看到
+</div>
+
+<div sec:authorize="hasAuthority('DATACAPTURE_INIT_LIST')">
+    数据补录列表---有列表的权限人可以看到
+</div>
+
+<div sec:authorize="isAuthenticated()">
+   授权(登陆)用户可以看到
 </div>
 
 </body>
