@@ -73,4 +73,6 @@ public class HrRoleBean implements UserDetails {
         }
         return authorities;
     }
+
+
 }

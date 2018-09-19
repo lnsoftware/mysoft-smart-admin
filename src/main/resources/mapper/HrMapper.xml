@@ -29,8 +29,8 @@
         <result column="userface" property="userface" />
         <result column="remark" property="remark" />
         <collection property="roleList" ofType="com.mysoft.admin.bean.RoleBean">
-            <id column="id" property="id" />
-            <result column="name" property="name" />
+            <id column="role_id" property="id" />
+            <result column="role_name" property="name" />
             <result column="nameZh" property="nameZh" />
         </collection>
     </resultMap>
@@ -39,7 +39,9 @@
     <select id="getHrRole" parameterType="com.mysoft.admin.bean.HrBean"
             resultMap="HrRoleMap">
         select t1.*,
-               t3.*
+               t3.id as role_id,
+               t3.name as role_name,
+               t3.nameZh
         from hr t1,
              hr_role t2,
              role t3

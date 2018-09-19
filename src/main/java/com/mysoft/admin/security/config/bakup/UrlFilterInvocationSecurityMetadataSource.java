@@ -1,4 +1,4 @@
-package com.mysoft.admin.security.config;
+package com.mysoft.admin.security.config.bakup;
 
 import com.mysoft.admin.bean.MenuRoleBean;
 import com.mysoft.admin.bean.RoleBean;

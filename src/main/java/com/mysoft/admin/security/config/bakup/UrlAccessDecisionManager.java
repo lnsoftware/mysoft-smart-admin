@@ -1,4 +1,4 @@
-package com.mysoft.admin.security.config;
+package com.mysoft.admin.security.config.bakup;
 
 import org.springframework.security.access.AccessDecisionManager;
 import org.springframework.security.access.AccessDeniedException;

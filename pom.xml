@@ -82,6 +82,12 @@
             <artifactId>nimbus-jose-jwt</artifactId>
             <version>4.13.1</version>
         </dependency>
+
+        <!-- thymeleaf配置 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
