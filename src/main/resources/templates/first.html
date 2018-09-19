@@ -1,10 +1,22 @@
 <!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>First Html Page</title>
 </head>
 <body>
+
+<div sec:authorize="hasAuthority('DATACAPTURE_DETAIL_EDIT')">
+    DATACAPTURE DETAIL EDIT
+</div>
+
+<div sec:authorize="hasAuthority('DATACAPTURE_DETAIL_SHOW')">
+    DATACAPTURE DETAIL SHOW
+</div>
 
 </body>
 </html>

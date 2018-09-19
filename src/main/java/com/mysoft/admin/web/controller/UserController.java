@@ -23,11 +23,12 @@ import java.util.List;
  * @Date 9/18/2018 3:16 PM
  * @Version 1.0
  */
-@RestController
+@Controller
 @RequestMapping("/api/dataCapture")
 public class UserController {
 
     @RequestMapping("/get")
+    @ResponseBody
     public String get() {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
         List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>(auth.getAuthorities());
@@ -45,6 +46,7 @@ public class UserController {
      */
     @PreAuthorize("hasRole('DATACAPTURE_INIT_LIST')")
     @RequestMapping("/list")
+    @ResponseBody
     public String list() {
         return "dataCapture-list-api";
     }
@@ -56,6 +58,7 @@ public class UserController {
      */
     @PreAuthorize("hasAuthority('DATACAPTURE_DETAIL_INPUT')")
     @RequestMapping("/input")
+    @ResponseBody
     public String input() {
         return "dataCapture-input-api";
     }
@@ -68,6 +71,6 @@ public class UserController {
     @PreAuthorize("hasPermission('xxx', 'DATACAPTURE_DETAIL_EDIT')")
     @RequestMapping("/edit")
     public String edit() {
-        return "dataCapture-edit-api";
+        return "first";
     }
 }
