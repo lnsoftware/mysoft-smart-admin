@@ -1,5 +1,6 @@
 package com.mysoft.admin.bean;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import com.mysoft.admin.db.entity.Role;
 import lombok.Data;
 import lombok.Getter;
@@ -42,6 +43,11 @@ public class HrRoleBean implements UserDetails {
     private String userface;
 
     private String remark;
+
+    @JSONField(serialize = false)
+    public List<RoleBean> getRoleList() {
+        return roleList;
+    }
 
     private List<RoleBean> roleList;
 

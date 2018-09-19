@@ -44,7 +44,7 @@ public class UserController {
      *
      * @return
      */
-    @PreAuthorize("hasRole('DATACAPTURE_INIT_LIST')")
+    @PreAuthorize("hasAuthority('DATACAPTURE_INIT_LIST')")
     @RequestMapping("/list")
     @ResponseBody
     public String list() {
